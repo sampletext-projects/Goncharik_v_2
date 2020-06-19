@@ -264,6 +264,7 @@ public:
 
 int main()
 {
+	setlocale(LC_ALL, "russian");
 	LinkedList<float> list;
 	list.push_back(1.1);
 	list.write();
@@ -275,10 +276,11 @@ int main()
 	list.write();
 	cout << list.min() << "\n\n";
 
-	ArrayList<> aeroflot_list;
+	ArrayList<Aeroflot> aeroflot_list;
 	aeroflot_list.push_back(new Aeroflot(1, 14 * 3600 + 33 * 60, 1 + 4 + 16 + 64)); // (пн, ср, пт, вс) в 14:33
 	aeroflot_list.push_back(new Aeroflot(2, 21 * 3600 + 17 * 60, 1 + 2 + 4 + 8 + 16 + 32 + 64));
 	// (каждый день) в 21:13
 	aeroflot_list.write();
+	system("pause");
 	return 0;
 }
